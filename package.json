@@ -1,0 +1,23 @@
+{
+  "name": "tierengine",
+  "version": "1.0.0",
+  "description": "Static 11ty-powered tier lists with Markdown-defined tiers and items",
+  "author": "Daniel Ilich",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ukqfhf/tierengine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ukqfhf/tierengine/issues"
+  },
+  "homepage": "https://github.com/ukqfhf/tierengine#readme",
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  }
+}

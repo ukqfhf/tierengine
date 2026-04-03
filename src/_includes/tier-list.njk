@@ -1,0 +1,46 @@
+---
+layout: layout.njk
+---
+
+<main class="tier-container">
+    <header>
+        <h1>{{ title }}</h1>
+        {% if content %}
+            <p>{{ content | safe }}</p>
+        {% endif %}
+    </header>
+
+    <section class="tier-board" aria-label="Tier board">
+        {% for tier in tiers %}
+            <div class="tier-row dropzone">
+                <h2
+                    class="tier-label"
+                    style="background: {{ tier.color }}"
+                >
+                    {{ tier.label }}
+                </h2>
+
+                <ul
+                    class="pool-list"
+                    data-tier="{{ tier.label }}"
+                    aria-label="Items in tier {{ tier.label }}"
+                ></ul>
+            </div>
+        {% endfor %}
+    </section>
+
+    <section class="item-pool dropzone" aria-labelledby="item-pool-title">
+        <h2 id="item-pool-title">Unranked</h2>
+
+        <ul
+            class="pool-list"
+            aria-label="Unranked items"
+        >
+            {% for item in items %}
+                <li class="pool-list-item">
+                    <img class="tier-item-img" draggable="true" src="{{ item.image }}" alt="{{ item.name }}">
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+</main>

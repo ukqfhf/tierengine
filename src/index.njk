@@ -1,0 +1,20 @@
+---
+layout: layout.njk
+title: Tier Engine
+---
+
+<h1>Tier Engine</h1>
+
+<p>
+    Static 11ty-powered tier lists with Markdown-defined tiers and items.
+</p>
+
+<nav>
+    <ul>
+        {%- for tierList in collections['tier-list'] -%}
+            <li>
+                <a href="{{ tierList.page.url }}">{{ tierList.data.title }}</a>
+            </li>
+        {%- endfor -%}
+    </ul>
+</nav>
