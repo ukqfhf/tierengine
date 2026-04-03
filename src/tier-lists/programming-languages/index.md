@@ -11,7 +11,7 @@ tiers:
     color: "rgb(255, 223, 127)"
   - label: C
     color: "rgb(255, 255, 127)"
-  - label: D
+  - label: DG
     color: "rgb(191, 255, 127)"
 items:
   - title: Bash
