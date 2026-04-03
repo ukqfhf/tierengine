@@ -1,12 +1,16 @@
+import { HtmlBasePlugin } from "@11ty/eleventy";
+
 export default async function (eleventyConfig) {
+  eleventyConfig.addPlugin(HtmlBasePlugin);
+
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/tier-lists/**/images/**/*");
-
-  return {
-    dir: {
-      input: "src",
-    },
-    markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
-  };
 }
+
+export const config = {
+  dir: {
+    input: "src",
+  },
+  markdownTemplateEngine: "njk",
+  htmlTemplateEngine: "njk",
+};
